@@ -8,6 +8,23 @@ import NavBar from "./components/NavBar";
 function App() {
   const [books, setBooks] = useState([]);
 
+  const deleteBookById = (id) => {
+    const updatedBooks = books.filter((book) => {
+      return book.id !== id;
+    });
+    setBooks(updatedBooks);
+  };
+
+  const editBookById = (id, newTitle) => {
+    const updatedBooks = books.map((book) => {
+     if (book.id === id) {
+      return {...book, title: newTitle}
+     }
+     return book;
+    });
+    setBooks(updatedBooks);
+  };
+
   const createBook = (title) => {
     const updatedBooks = [
       ...books,
@@ -22,7 +39,7 @@ function App() {
       <div className="App">
         <BookCreate onCreate={createBook} />
         <div className="mt-10">
-          <BookList books={books} />
+          <BookList books={books} onDelete={deleteBookById} onEdit={editBookById} />
         </div>
       </div>
     </div>
