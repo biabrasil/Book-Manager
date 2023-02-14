@@ -17,10 +17,10 @@ function App() {
 
   const editBookById = (id, newTitle) => {
     const updatedBooks = books.map((book) => {
-     if (book.id === id) {
-      return {...book, title: newTitle}
-     }
-     return book;
+      if (book.id === id) {
+        return { ...book, title: newTitle };
+      }
+      return book;
     });
     setBooks(updatedBooks);
   };
@@ -39,7 +39,11 @@ function App() {
       <div className="App">
         <BookCreate onCreate={createBook} />
         <div className="mt-10">
-          <BookList books={books} onDelete={deleteBookById} onEdit={editBookById} />
+          <BookList
+            books={books}
+            onDelete={deleteBookById}
+            onEdit={editBookById}
+          />
         </div>
       </div>
     </div>
