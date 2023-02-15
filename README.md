@@ -19,6 +19,16 @@ Prettier is an opinionated code formatter.
 It removes all original styling* and ensures that all outputted code conforms to a consistent style.
 https://prettier.io/
 
+### `npm run server`
+Starts / Runs the JSON Server. Will run on port 3001. Make sure it is free to use.
+
+Network requests will be made with a third party library named Axios.
+Axios is a promise-based HTTP Client for node.js and the browser.
+It offers different ways of making HTTP requests such as GET, POST, PUT, and DELETE.
+In this application, it is used as a REST client.
+
+https://axios-http.com/
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
