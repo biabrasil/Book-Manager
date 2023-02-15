@@ -5,7 +5,7 @@ import BookEdit from "./BookEdit";
 
 export default function BookShow({ book }) {
   const [showEdit, setShowEdit] = useState(false);
-  const {deleteBookById} = useContext(BooksContext);
+  const { deleteBookById } = useContext(BooksContext);
 
   const handleDeleteClick = () => {
     deleteBookById(book.id);
