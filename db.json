@@ -1,24 +1,8 @@
 {
   "books": [
     {
-      "title": "hello world 1",
-      "id": 1
-    },
-    {
-      "title": "hi",
-      "id": 2
-    },
-    {
-      "title": "one",
-      "id": 3
-    },
-    {
-      "title": "two books",
-      "id": 4
-    },
-    {
-      "title": "harry potter",
-      "id": 5
+      "title": "Virginia Woolf",
+      "id": 6
     }
   ]
 }
